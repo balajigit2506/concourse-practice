@@ -7,4 +7,4 @@ image_resource:
 
 run:
   path: echo
-  args: [I am yet to learn how to automate ec2 instance provisioning but i learn to trigger the pipeline on commit..]
+  args: [I am yet to learn how to automate ec2 instance provisioning but i learn to trigger the pipeline on commit...]
