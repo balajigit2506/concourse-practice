@@ -7,4 +7,4 @@ image_resource:
 
 run:
   path: echo
-  args: [I learnt a lot about automating s3 bucket creation and uploading files today..]
+  args: [I learnt how to set concourse pipeline using git as a resource..]
