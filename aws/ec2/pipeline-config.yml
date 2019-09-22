@@ -1,0 +1,4 @@
+---
+pipeline-config:
+   uri: https://github.com/balajigit2506/concourse-practice.git
+   branch: master
