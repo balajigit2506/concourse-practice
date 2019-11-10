@@ -4,5 +4,7 @@ image_resource:
   type: docker-image
   source: {repository: busybox}
 run:
-  path: aws-resources/aws/ec2/create-stack.py
+  path: echo
+  args:
+  - Calling boto function..
   
