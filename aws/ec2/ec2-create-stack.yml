@@ -1,0 +1,30 @@
+Resources:
+  AppNode:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-04842d7f071c46f73
+      KeyName: Linux-sandbox
+      SecurityGroups:
+        - !Ref AppNodeSG
+      UserData: !Base64 |
+      #!/bin/bash
+      yum update -y
+      yum install httpd -y
+      chkconfig httpd on
+      service httpd start
+      cd /var/www/html
+      echo "<html><h1>My first EC2 instance ctreated from a cloud formation stack..</h1></html>" > index.html
+  AppNodeSG:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: for the app nodes that allow ssh and http ports
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: '80'
+        ToPort: '80'
+        CidrIp: 0.0.0.0/0
+      - IpProtocol: tcp
+        FromPort: '22'
+        ToPort: '22'
+        CidrIp: 0.0.0.0/0
