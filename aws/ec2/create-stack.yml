@@ -5,5 +5,6 @@ image_resource:
   source: {repository: bgdocker256/awscli-py:devops}
 run:
   path: echo
-  args: [Running from a AWS CLI docker image...]
+  args: 
+  - Running from a AWS CLI docker image...
   
