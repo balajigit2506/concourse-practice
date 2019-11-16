@@ -2,7 +2,7 @@ platform: linux
 
 image_resource:
   type: docker-image
-  source: {aws-cli-py: devops}
+  source: {repository: aws-cli-py}
 run:
   path: echo
   args: [Running from a AWS CLI docker image...]
