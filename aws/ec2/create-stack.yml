@@ -5,6 +5,5 @@ image_resource:
   source: {aws-cli-py: devops}
 run:
   path: echo
-  args:
-  - Running from a AWS CLI docker image...
+  args: [Running from a AWS CLI docker image...]
   
