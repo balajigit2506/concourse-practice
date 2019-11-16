@@ -2,9 +2,9 @@ platform: linux
 
 image_resource:
   type: docker-image
-  source: {repository: busybox}
+  source: {aws-cli-py: devops}
 run:
   path: echo
   args:
-  - Calling boto function..
+  - Running from a AWS CLI docker image...
   
